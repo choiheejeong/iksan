@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+/*EBS 훈민정음*/
+@font-face {
+    font-family: 'EBSHunminjeongeumSBA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHunminjeongeum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EBSHMJESaeronRA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/EBSHMJESaeronRA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*솔뫼*/
+@font-face {
+    font-family: 'kdg_Medium';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/kdg_Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*고딕*/
+@font-face {
+	font-family: 'gothic';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Black.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Black.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url(/pcms/common/fonts/ko/pretendard/Pretendard-ExtraBold.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-ExtraBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Bold.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Bold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(/pcms/common/fonts/ko/pretendard/Pretendard-SemiBold.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-SemiBold.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Medium.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Medium.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Regular.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Regular.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Light.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Light.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url(/pcms/common/fonts/ko/pretendard/Pretendard-ExtraLight.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-ExtraLight.subset.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'gothic';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Thin.subset.woff2) format('woff2'), url(/pcms/common/fonts/ko/pretendard/Pretendard-Thin.subset.woff) format('woff');
+}
+
+/*추사*/
+@font-face {
+    font-family: 'ChusaLove';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+html{font-family:'gothic', '맑은 고딕', '돋움';}
+a{text-decoration:none; color:inherit; display:inline-block;}
+body{line-height:1.6;}
+
+.clearfix::after{content:''; display:block; clear:both;}
+
+header{position:fixed; z-index:100; width:100%; height:150px;
+    .top_layout{height:50px; padding:0 100px;
+     background:#fff; border-bottom:1px solid #eee;
+    line-height:50px; font-weight:500;}
+    #top_nav{float:left; font-size:15px; color:#666;}
+    #top_nav li{position:relative; display:inline-block; margin-right:40px;
+        letter-spacing:-0.9px;}
+    #top_nav li::before{content:''; display:block; width:1px; height:12px; background:#ddd;
+    position:absolute; top:18px; right:-20px;}
+    #top_nav li:last-child::before{background:none;}
+    #nuri-zip{float:right; display:flex; justify-content:center; align-items:center; position:relative;
+        width:200px; height:100%; color:#de3059; font-size:18px; line-height:12px; letter-spacing:-1px;
+        text-align:center; border-left:1px solid #eee; border-right:1px solid #eee;}
+    #nuri-zip::after{content:''; position:absolute; left:0; bottom:-1px; width:100%; height:4px;
+        background:#e93660;}
+    #nuri-zip p::before{
+        content:''; display:inline-block; width:10px; height:10px;
+        margin-top:-3px; margin-right:5px;
+        background-repeat:no-repeat; background-position:50%;
+    }
+}//end:header
+
+
+.gnb_layout{
+    position:relative; height:100px; background:#fff;
+    padding:0 100px; display:flex; border-bottom:1px solid #eee;
+    justify-content:space-between;
+    a:hover{color:#0033a5;}
+}//end:.gnb_layout
+
+#logo{margin:31px 0;}
+#gnb_menu{font-size:20px; font-weight:700; width:50%;
+    color:#222; letter-spacing:-1px; vertical-align:middle;
+    line-height:100px; transition:all .3s; text-align:center;
+    & > ul{display:flex;}
+    & > ul > li{transition:all .3s ease-in-out; position:relative;
+        width:calc(100% / 6);}
+    /*& > ul > li::before{content:''; } 메뉴 아래 밑줄*/ 
+    & > ul > li::after{
+    content:''; display:none;
+    position:absolute; left:0; top:97px; width:100%;
+    height:4px; background:#0033a5;}
+    .sub{
+        background:#fff; width:100%; height:520px;
+        display:none; padding-top:20px; line-height:2.5;
+        li{float:none; margin:0 0 0 10px;}
+        a{font-weight:normal; padding:0; font-size:18px;
+        white-space:nowrap;}
+    }//end:.sub
+    &:hover{width:65%;
+        .sub{display:block;}
+    }
+    & > ul > li:hover::after{display:block;}
+}//end:#gnb_menu
+
+
+.util{height:100px;
+    display:flex; align-items:center;}
+#search{display:flex;}
+#search a{margin-left:25px;}
+.hamburger{display:flex; flex-direction:column;
+    justify-content:space-between; width:21px; height:20px;}
+.hamburger span{background:#222; align-self:flex-end;
+    height:2px; width:100%;}
+
+
+.main_visual{padding-top:151px; display:flex;
+    .title_visual{
+        flex-basis:42%;
+    }
+    .slide_visual{
+        width:58%; overflow:hidden;
+        .swiper-wrapper{display:flex; position:relative;}
+        .swiper-slide{flex-shrink:0;}
+        img{width:1078px; height:750px;}
+    }
+    .swiper-button-prev{width:100px; height:100px; background:#af9375;
+        border-radius:0 0 0 10px;}
+    .swiper-button-next{width:100px; height:100px; background:#79563c;
+        border-radius:0 10px 0 0;}
+}//end:main_visual
+
+.text{
+    position:absolute; bottom:20px; right:30px; color:#fff;
+    font-weight:bold;
+    h3{font-size:15px;}
+    strong{font-size:20px; margin:0 10px;}
+}
+
+
+.text_box{font-family:'ChusaLove';
+    position:absolute; top:250px; left:220px;
+    #main_text{display:flex; align-items:flex-end;
+        p{writing-mode:vertical-lr;}
+        p:last-child{margin-left:50px;}
+        strong{font-size:90px; letter-spacing:-20px;}
+        span{font-size:22px; letter-spacing:5px;}
+        em{font-family:'EBSHunminjeongeumSBA'; font-size:24px;
+        letter-spacing:5px; border-left:3px double #dcd9d6;
+        border-right:3px double #dcd9d6;
+        color:#635340; font-weight:400;
+        padding: 0 5px; padding-bottom:20px;}
+    }
+}
