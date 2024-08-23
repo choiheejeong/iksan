@@ -43,7 +43,8 @@ header{position:fixed; z-index:100; width:100%; height:150px;
     & > ul{display:flex;}
     & > ul > li{transition:all .3s ease-in-out; position:relative;
         width:calc(100% / 6);}
-    /*& > ul > li::before{content:''; } 메뉴 아래 밑줄*/ 
+    & > ul > li::before{content:''; position:absolute; left:0; top:100px;
+        width:100%; height:1px; background:#eee;}
     & > ul > li::after{
     content:''; display:none;
     position:absolute; left:0; top:97px; width:100%;
@@ -77,15 +78,21 @@ header{position:fixed; z-index:100; width:100%; height:150px;
         flex-basis:42%;
     }
     .slide_visual{
-        width:58%; overflow:hidden;
+        flex-basis:58%; overflow:hidden;
         .swiper-wrapper{display:flex; position:relative;}
         .swiper-slide{flex-shrink:0;}
         img{width:1078px; height:750px;}
     }
+    .btn{float:left; font-family:'EBSHunminjeongeumSBA'; font-size:18px;
+        color:#fff; font-weight:500; cursor:pointer;
+        p{display:flex; justify-content:center; margin-top:40px;}
+    }
     .swiper-button-prev{width:100px; height:100px; background:#af9375;
-        border-radius:0 0 0 10px;}
+        border-radius:0 0 0 10px;
+        position:absolute; bottom:48px; left:37%;}
     .swiper-button-next{width:100px; height:100px; background:#79563c;
-        border-radius:0 10px 0 0;}
+        border-radius:0 10px 0 0;
+        position:absolute; bottom:48px; left:42%;}
 }//end:main_visual
 
 .text{
@@ -104,9 +111,106 @@ header{position:fixed; z-index:100; width:100%; height:150px;
         strong{font-size:90px; letter-spacing:-20px;}
         span{font-size:22px; letter-spacing:5px;}
         em{font-family:'EBSHunminjeongeumSBA'; font-size:24px;
-        letter-spacing:5px; border-left:3px double #dcd9d6;
+        border-left:3px double #dcd9d6;
         border-right:3px double #dcd9d6;
-        color:#635340; font-weight:400;
+        color:#635340; font-weight:bold;
         padding: 0 5px; padding-bottom:20px;}
     }
-}
+}//end:.text_box
+
+.iksan_trip{
+    position:relative; padding-top:220px;
+    width:100%; height:650px;
+    .bg_box1{position:absolute; top:70px; left:0;
+        .c_bg{position:absolute; top:-70px; left:0; bottom:0; right:0; z-index:-2;
+            img{width:1857px;}
+        }
+    }//end:.bg_box1
+    .trip_title{text-align:center;
+    h2{font-family:'EBSHunminjeongeumSBA'; font-size:52px;
+    color:#3e3c35; line-height:1; margin-bottom:15px;
+    font-weight:bold;}
+    .solmoe{font-family:'kdg_Medium';}
+    em{font-size:67px; font-weight:normal; color:#79563c;}
+    span{font-size:18px; color:#333;}
+    }//end:.trip_tilte
+    .trip_info{padding-top:50px; position:relative;
+        ul{display:flex; justify-content:center;}
+        li{margin-right:70px;}
+        li:last-child{margin-right:0;}
+        li img{border-radius:50px 0 50px 0;}
+        .on_box{
+            position:absolute;
+            display:flex; flex-wrap:wrap;
+            width:250px; height:70px;
+            background:#79563c; color:#fff;
+            border-radius:50px 0 50px 0;
+            padding:35px 30px; overflow:hidden;
+            opacity:0; visibility:hidden; transition:all .4s ease-in-out;
+            strong{font-family:'EBSHunminjeongeumSBA'; font-size:25px;
+                font-weight:bold;}
+            span{font-size:15px;}
+        }//end:.on_box
+        .on_box1{bottom:-50px; left:274px;}
+        .on_box2{border-radius:0 50px 0 50px;
+            bottom:-50px; left:39.5%;}
+        .on_box3{bottom:-50px; right:273px;}
+        & > ul > li:hover .on_box{opacity:1; visibility:visible;}
+    }//end:.trip_info
+}//end:.iksan_trip
+
+
+.festival{
+    padding:100px 0; position:relative;
+    .bg_box2{width:95%; height:723px; background:#f5f1ed;
+    margin:0 auto;
+        .festival_title{
+            text-align:center; padding-top:75px;
+            h2{font-family:'EBSHunminjeongeumSBA'; font-size:52px;
+            color:#3e3c35; line-height:1; margin-bottom:15px;
+            font-weight:bold;}
+            .solmoe{font-family:'kdg_Medium';}
+            em{font-size:67px; font-weight:normal; color:#79563c;}
+            span{font-size:18px; color:#333;}
+            }//end:.festival_tilte
+        .iksan_festival{
+            display:flex; justify-content:center;
+            padding-top:60px;
+            .fst{width:280px; height:310px; background:#fff;
+                padding:35px; margin-right:20px;
+                border-radius:10px;}
+            .fst:last-child{margin-right:0;}
+            h3{margin:25px 0 15px; font-size:22px; line-height:1;
+            color:#333; font-weight:bold;}
+            span{font-size:16px; color:#666;}
+            }//end:.iksan_festival
+    }//end:.bg_box2
+    #bg2{position:absolute; bottom:20px; left:0;}
+    #bg3{position:absolute; bottom:20px; right:0;}
+}//end:.festival
+
+
+#notice{
+    padding:100px 0;
+    .n_inner{
+        display:flex; justify-content:center;
+        #notice_wrap{
+        font-family:'EBSHunminjeongeumSBA';
+        font-weight:600;
+        width:663px; height:427px; border:3px solid lightblue;
+        #notice_title{
+        display:flex; align-items:center;
+        margin:50px;
+        a{color:#79563c; margin-right:20px;}
+        /*a::after{content:''; display:block; width:100%; height:5px;
+         background:#79563c;}*/
+        span{color:#333; font-size:29px;}
+        em{color:#000; font-size:20px; margin-left:240px;}
+        }
+        }//end:#notice_wrap
+        #info_wrap{
+        width:824px; height:427px; border:3px solid pink;
+        }////end:#info_wrap
+    }//end:.n_inner
+
+}//end:#notice
