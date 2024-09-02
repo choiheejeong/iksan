@@ -246,8 +246,8 @@ header #nuri-zip p::before {
   background: #af9375;
   border-radius: 0 0 0 10px;
   position: absolute;
-  bottom: 48px;
-  left: 37%;
+  bottom: 63px;
+  left: 36.6%;
 }
 .main_visual .swiper-button-next {
   width: 100px;
@@ -255,8 +255,16 @@ header #nuri-zip p::before {
   background: #79563c;
   border-radius: 0 10px 0 0;
   position: absolute;
-  bottom: 48px;
+  bottom: 63px;
   left: 42%;
+}
+.main_visual .swiper-button-prev:hover {
+  border: 1px dashed #000;
+  z-index: 10;
+}
+.main_visual .swiper-button-next:hover {
+  border: 1px dashed #000;
+  z-index: 10;
 }
 
 .text {
@@ -349,6 +357,7 @@ header #nuri-zip p::before {
   font-size: 67px;
   font-weight: normal;
   color: #79563c;
+  position: relative;
 }
 .iksan_trip .trip_title span {
   font-size: 18px;
@@ -405,7 +414,7 @@ header #nuri-zip p::before {
 }
 .iksan_trip .trip_info .on_box3 {
   bottom: -50px;
-  right: 273px;
+  right: 353px;
 }
 .iksan_trip .trip_info > ul > li:hover .on_box {
   opacity: 1;
@@ -458,6 +467,11 @@ header #nuri-zip p::before {
   padding: 35px;
   margin-right: 20px;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.festival .bg_box2 .iksan_festival .fst:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px #aaa;
 }
 .festival .bg_box2 .iksan_festival .fst:last-child {
   margin-right: 0;
@@ -485,29 +499,35 @@ header #nuri-zip p::before {
 }
 
 #notice {
-  padding: 100px 0;
+  padding-bottom: 20px 0 50px;
 }
 #notice .n_inner {
   display: flex;
   justify-content: center;
 }
 #notice .n_inner #notice_wrap {
-  font-family: "EBSHunminjeongeumSBA";
-  font-weight: 600;
+  font-family: "gothic";
   width: 663px;
   height: 427px;
-  border: 3px solid lightblue;
 }
 #notice .n_inner #notice_wrap #notice_title {
+  cursor: pointer;
+  font-family: "EBSHunminjeongeumSBA";
+  font-weight: 600;
   display: flex;
   align-items: center;
-  margin: 50px;
-  /*a::after{content:''; display:block; width:100%; height:5px;
-   background:#79563c;}*/
+  margin: 50px 0 30px 50px;
 }
 #notice .n_inner #notice_wrap #notice_title a {
   color: #79563c;
   margin-right: 20px;
+}
+#notice .n_inner #notice_wrap #notice_title a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #79563c;
 }
 #notice .n_inner #notice_wrap #notice_title span {
   color: #333;
@@ -518,8 +538,191 @@ header #nuri-zip p::before {
   font-size: 20px;
   margin-left: 240px;
 }
+#notice .n_inner #notice_wrap .notice_sub {
+  display: flex;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_date {
+  width: 85px;
+  height: 85px;
+  margin-left: 50px;
+  border: 5px solid #e4e4e4;
+  border-radius: 10px 0 10px 0;
+  text-align: center;
+  color: #333;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_date span {
+  font-size: 30px;
+  font-weight: 600;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_date em {
+  font-size: 15px;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_text {
+  margin-left: 22px;
+  line-height: 1.8;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_text strong {
+  font-size: 20px;
+  color: #79563c;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_text strong::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(121, 86, 60, 0.2);
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transition: all 0.2s ease-in-out;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_text strong:hover::before {
+  left: 0;
+}
+#notice .n_inner #notice_wrap .notice_sub .n_text em {
+  color: #555;
+}
+#notice .n_inner #notice_wrap .notice_board {
+  margin: 30px 0 0 50px;
+}
+#notice .n_inner #notice_wrap .notice_board li {
+  line-height: 2.1;
+  position: relative;
+}
+#notice .n_inner #notice_wrap .notice_board span {
+  font-size: 17px;
+  color: #333;
+  display: block;
+}
+#notice .n_inner #notice_wrap .notice_board em {
+  font-size: 15px;
+  color: #767676;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 50px;
+}
+#notice .n_inner #notice_wrap .notice_board li a > span::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #c9c9c9;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  left: -12px;
+}
 #notice .n_inner #info_wrap {
+  position: relative;
   width: 824px;
   height: 427px;
-  border: 3px solid pink;
+}
+#notice .n_inner #info_wrap .fst_box {
+  width: 823px;
+  height: 323px;
+  margin-top: 50px;
+  border: 1px solid #af9375;
+}
+#notice .n_inner #info_wrap .fst_box h3 {
+  font-size: 26px;
+  font-family: "EBSHunminjeongeumSBA";
+  font-weight: 600;
+  color: #333;
+  margin: 30px 0 10px 68px;
+}
+#notice .n_inner #info_wrap .fst_box #info_1 {
+  float: left;
+}
+#notice .n_inner #info_wrap .fst_box #info_2 {
+  float: left;
+}
+#notice .n_inner #info_wrap .fst_box #info_1, #notice .n_inner #info_wrap .fst_box #info_2 {
+  line-height: 1.8;
+  margin: 5px 0 0 70px;
+  font-size: 15px;
+  color: #333;
+}
+#notice .n_inner #info_wrap .fst_box #info_1 li, #notice .n_inner #info_wrap .fst_box #info_2 li {
+  display: inline-block;
+  margin-bottom: 27px;
+  margin-right: 100px;
+}
+#notice .n_inner #info_wrap .fst_box #info_1 span, #notice .n_inner #info_wrap .fst_box #info_2 span {
+  font-size: 17px;
+  font-weight: bold;
+  color: #79563c;
+}
+#notice .n_inner #info_bg2 {
+  clear: both;
+  position: absolute;
+  bottom: 10px;
+  right: 25px;
+}
+#notice .n_inner #info_bg2 img {
+  width: 120px;
+  height: 160px;
+}
+
+#city_menu {
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+#city_menu .city_gnb {
+  display: flex;
+  justify-content: center;
+}
+#city_menu .city_gnb li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 100px;
+}
+#city_menu .city_gnb li:last-child {
+  margin-right: 0;
+}
+#city_menu .city_gnb img {
+  border: 3px solid #f6f4f0;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+#city_menu .city_gnb img:hover {
+  border: 3px solid #79563c;
+  padding: 10px;
+  border-radius: 50%;
+}
+#city_menu .city_gnb p {
+  font-size: 15px;
+  color: #494949;
+  margin-top: 20px;
+}
+
+footer .f_inner {
+  height: 242px;
+  background: #2f3541;
+}
+footer .f_inner #ft_info {
+  padding: 50px 0 25px 190px;
+  color: #C1C2C6;
+  font-size: 16px;
+}
+footer .f_inner #ft_info li {
+  display: inline-block;
+  margin-right: 50px;
+}
+footer .f_inner #ft_info li:first-child {
+  color: #00bbbb;
+  font-weight: bold;
+}
+footer .f_inner .ft_box {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #3e434e;
+  color: #C1C2C6;
 }
