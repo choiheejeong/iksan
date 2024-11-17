@@ -1,12 +1,12 @@
 
-//스와이퍼 플러그인 호출
+//메인 슬라이드
 const swiper1 = new Swiper('.slide_visual', {
-    // 파라메타
     loop: true,
     effect:'fade',
-    autoplay: {    //자동재생
-    delay: 2800,  //슬라이드 하나당 표시 시간
+    autoplay: {    
+    delay: 3000,  
    },
+   speed: 1000,
 
    // 버튼
    navigation: {
@@ -15,3 +15,21 @@ const swiper1 = new Swiper('.slide_visual', {
   },
 
 });
+
+/*
+축제 슬라이드
+const festival = new Swiper('.festival .f_swiper', {
+  containerModifierClass: 'f_swiper',
+  wrapperClass:'iksan_festival',
+  slideClass:'fst',
+  loop: true,
+  slidesPerView: auto,
+
+  navigation: {
+    nextEl: '.next',
+    prevEl: '.prev',
+  },
+
+
+});
+*/
